@@ -15,7 +15,7 @@ export default definePlugin({
         {
             find: "this channel should already be loaded",
             replacement: {
-                match: /lMuted\(\i,(\i\.id)\)(?=.+?(\i\.\i\.isFavorite))/,
+                match: /.isGuildOrCategoryOrChannelMuted\(\i,(\i\.id)\)(?=.+?(\i\.\i\.isFavorite))/,
                 replace: "$& && !$2($1)"
             }
         }
